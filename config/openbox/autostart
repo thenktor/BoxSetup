@@ -1,0 +1,31 @@
+# The autostart script is the ideal way to execute specific commands and programs when Openbox starts.
+
+# wallpaper
+nitrogen --restore &
+
+# taskbar/dock
+tint2 &
+
+# mouse
+xset m 9/8 4
+
+# things that do not hurry
+claws-mail &
+gkrellm -w &
+sakura -m -n 5 &
+parcellite &
+#squeezelite-tray.sh &
+
+# Run XDG autostart things.  By default don't run anything desktop-specific
+# See xdg-autostart --help more info
+DESKTOP_ENV="OPENBOX"
+if which /usr/lib64/openbox/xdg-autostart >/dev/null; then
+  /usr/lib64/openbox/xdg-autostart $DESKTOP_ENV
+else if which /usr/lib/openbox/xdg-autostart >/dev/null; then
+  /usr/lib/openbox/xdg-autostart $DESKTOP_ENV
+fi
+
+# others
+xset s off
+xset s noblank
+xset +dpms

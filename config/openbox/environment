@@ -1,0 +1,6 @@
+# Using the environment file is the ideal place to export global variables and configure the Openbox environment:
+
+# D-bus
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+    eval `dbus-launch --sh-syntax --exit-with-session`
+fi

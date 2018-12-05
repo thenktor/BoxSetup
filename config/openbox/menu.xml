@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Run Program">
+			<action name="Execute">
+				<execute>
+					gmrun
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>
+					xterm
+				</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>
+					firefox
+				</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>
+					thunar
+				</execute>
+			</action>
+		</item>
+		<item label="Text Editor">
+			<action name="Execute">
+				<execute>
+					geany
+				</execute>
+			</action>
+		</item>
+		<item label="Media Player">
+			<action name="Execute">
+				<execute>
+					vlc
+				</execute>
+			</action>
+		</item>
+		<item label="Audio Volume">
+			<action name="Execute">
+				<execute>
+					pavucontrol
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="settings" label="Settings">
+			<menu id="obConfig" label="Openbox Config">
+				<item label="Edit menu.xml">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/menu.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Edit rc.xml">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/rc.xml
+						</execute>
+					</action>
+				</item>
+				<item label="Edit autostart">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/autostart
+						</execute>
+					</action>
+				</item>
+				<item label="Edit environment">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/openbox/environment
+						</execute>
+					</action>
+				</item>
+				<item label="GUI Menu Editor">
+					<action name="Execute">
+						<execute>
+							obmenu
+						</execute>
+					</action>
+				</item>
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<execute>
+							obconf
+						</execute>
+					</action>
+				</item>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+			</menu>
+			<menu id="tint2config" label="tint2 Panel Config">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+							geany ~/.config/tint2/tint2rc
+						</execute>
+					</action>
+				</item>
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<execute>
+							tint2conf
+						</execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>
+							gtkman "tint2"
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="gmrunconfig" label="gmrun Config">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+							geany ~/.gmrunrc
+						</execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>
+							gtkman "gmrun"
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="compmgr" label="Compositing">
+				<item label="Enable compositing">
+					<action name="Execute">
+						<execute>
+							xcompmgr -cCfF
+						</execute>
+					</action>
+				</item>
+				<item label="Disable compositing">
+					<action name="Execute">
+						<execute>
+							killall xcompmgr
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="User Interface Settings">
+				<action name="Execute">
+					<execute>
+						lxappearance
+					</execute>
+				</action>
+			</item>
+			<item label="Choose Wallpaper">
+				<action name="Execute">
+					<execute>
+						nitrogen /usr/share/xfce4/backdrops/
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>
+					wm-logout
+				</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
