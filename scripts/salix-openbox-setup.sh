@@ -3,7 +3,7 @@
 # install my needed stuff on SalixOS and change some settings
 #
 
-zPkgList="gcc make binutils git wget openbox obconf tint2 parcellite nitrogen sakura gkrellm lxappearance"
+zPkgList="gcc make binutils git wget openbox obconf obmenu tint2 parcellite nitrogen sakura gkrellm lxappearance xfce4-settings"
 zCWD=`pwd`
 
 #
@@ -57,6 +57,19 @@ make -j4
 strip --strip-unneeded squeezelite
 sudo install -m755 -o root -g root squeezelite /usr/local/bin/
 
+# rofi
+sudo $zPkgInstallCmd xcb-util-xrm libxkbcommon
+cd ~/build
+git clone https://github.com/DaveDavenport/rofi.git rofi
+cd rofi
+git submodule update --init
+autoreconf -i
+mkdir build
+cd build
+../configure --disable-check
+make -j4
+sudo make install
+
 # gmrun
 cd ~/build
 git clone https://github.com/rtyler/gmrun.git gmrun
@@ -64,7 +77,14 @@ cd gmrun
 ./autogen.sh
 make -j4
 strip --strip-unneeded src/gmrun
-make install
+sudo make install
+
+# wm-logout
+cd ~/build
+git clone https://github.com/thenktor/wm-logout.git wm-logout
+cd wm-logout
+sudo ./install.sh
+
 
 #
 # install icons and themes

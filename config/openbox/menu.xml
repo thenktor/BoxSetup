@@ -12,7 +12,7 @@
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>
-					xterm
+					sakura
 				</execute>
 			</action>
 		</item>
@@ -118,28 +118,12 @@
 						</execute>
 					</action>
 				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<execute>
-							gtkman "tint2"
-						</execute>
-					</action>
-				</item>
 			</menu>
 			<menu id="gmrunconfig" label="gmrun Config">
 				<item label="Edit config file">
 					<action name="Execute">
 						<execute>
 							geany ~/.gmrunrc
-						</execute>
-					</action>
-				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<execute>
-							gtkman "gmrun"
 						</execute>
 					</action>
 				</item>
@@ -163,7 +147,7 @@
 			<item label="User Interface Settings">
 				<action name="Execute">
 					<execute>
-						lxappearance
+						xfce4-settings-manager
 					</execute>
 				</action>
 			</item>

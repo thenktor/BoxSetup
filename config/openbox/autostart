@@ -1,13 +1,13 @@
 # The autostart script is the ideal way to execute specific commands and programs when Openbox starts.
 
-# wallpaper
+# set wallpaper
 nitrogen --restore &
 
 # taskbar/dock
 tint2 &
 
-# mouse
-xset m 9/8 4
+# required for Xfce settings to work
+xfsettingsd &
 
 # things that do not hurry
 claws-mail &
@@ -25,7 +25,13 @@ else if which /usr/lib/openbox/xdg-autostart >/dev/null; then
   /usr/lib/openbox/xdg-autostart $DESKTOP_ENV
 fi
 
-# others
+# set mouse speed to 9/8 as fast: http://xahlee.info/linux/linux_set_mouse_speed.html
+#xset m 9/8 4 # disabled because of Xfce settings
+
+# disable screensaver and screen blanking
 xset s off
 xset s noblank
+
+# turn off monitor after 20 minutes
 xset +dpms
+xset dpms 1200 1200 1200
