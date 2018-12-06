@@ -10,6 +10,6 @@ zCWD=`pwd`
 #
 if [ -e /etc/slackware-version -a -x /usr/bin/spi ]; then
     echo "Salix detected"
-    ./scripts/salix-box-setup.sh
+    ./scripts/salix-openbox-setup.sh
     exit $?
 fi
