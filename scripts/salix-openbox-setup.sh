@@ -112,6 +112,13 @@ fi
 mkdir ~/.icons
 mkdir ~/.themes
 
+# Episode_1
+cd "$zCWD"
+if [ ! -e ~/.themes/Episode_1 ]; then
+    echo "Install Episode_1 Openbox theme..."
+    cp -r ../themes/Episode_1 ~/.themes/
+fi
+
 # Papirus
 cd ~/build
 if [ ! -e papirus-icon-theme-master ]; then
