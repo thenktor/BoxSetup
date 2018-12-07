@@ -3,7 +3,7 @@
 # install my needed stuff on SalixOS and change some settings
 #
 
-zPkgList="gcc make binutils git wget openbox obconf obmenu tint2 parcellite nitrogen sakura gkrellm xfce4-settings"
+zPkgList="gcc make binutils git wget openbox obconf obmenu tint2 murrine parcellite nitrogen sakura gkrellm xfce4-settings"
 zCWD=`pwd`
 
 #
