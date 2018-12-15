@@ -35,7 +35,7 @@ sudo $zPkgInstallCmd $zPkgList
 #
 echo "Edit /etc/inputrc..."
 sudo sed -i 's#"\\e\[5~": .*#"\\e\[5~": history-search-backward#' /etc/inputrc
-sudo sed -i 's#"\\e\[5~": .*#"\\e\[6~": history-search-forward#' /etc/inputrc
+sudo sed -i 's#"\\e\[6~": .*#"\\e\[6~": history-search-forward#' /etc/inputrc
 
 
 #
