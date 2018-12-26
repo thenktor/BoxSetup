@@ -12,5 +12,6 @@ if [ -e /etc/slackware-version -a -x /usr/bin/spi ]; then
     echo "Salix detected"
     cd scripts
     ./salix-openbox-setup.sh
+    ./salix-tools-setup.sh
     exit $?
 fi

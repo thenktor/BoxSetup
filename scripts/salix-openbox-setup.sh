@@ -39,34 +39,9 @@ sudo sed -i 's#"\\e\[6~": .*#"\\e\[6~": history-search-forward#' /etc/inputrc
 
 
 #
-# install AppImages
-#
-echo "Install AppImages..."
-mkdir -p ~/AppImages
-cd ~/AppImages
-if [ ! -e KeePassXC.AppImage ]; then
-    echo "Downloading KeePassXC.AppImage..."
-    wget -O KeePassXC.AppImage https://github.com/keepassxreboot/keepassxc/releases/download/2.3.4/KeePassXC-2.3.4-x86_64.AppImage
-else
-    echo "KeePassXC.AppImage already exists."
-fi
-
-
-#
 # build some stuff
 #
 mkdir ~/build
-
-# squeezelite
-cd ~/build
-if [ ! -e squeezelite ]; then
-    echo "Build squezzelite..."
-    git clone https://github.com/ralph-irving/squeezelite.git squeezelite
-    cd squeezelite
-    make -j4
-    strip --strip-unneeded squeezelite
-    sudo install -m755 -o root -g root squeezelite /usr/local/bin/
-fi
 
 # rofi
 cd ~/build
