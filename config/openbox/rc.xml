@@ -766,13 +766,6 @@
         <y>center</y>
       </position>
     </application>
-    <application class="Xfce4-terminal">
-      <desktop>2</desktop>
-      <position force="yes">
-        <x>center</x>
-        <y>center</y>
-      </position>
-    </application>
     <application class="Sakura">
       <desktop>2</desktop>
       <position force="yes">
