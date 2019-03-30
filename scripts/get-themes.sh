@@ -38,10 +38,10 @@ else
     cd ~/.icons/Electric_Funeral_Icon_Theme.git
     git pull
     cd ~/.icons/
-    ln -sf Electric_Funeral_Icon_Theme.git/Electric\ Dark\ Funeral/
-    ln -sf Electric_Funeral_Icon_Theme.git/Electric\ Light\ Funeral/
-    ln -sf Electric_Funeral_Icon_Theme.git/Dominus\ Dark\ Funeral/
-    ln -sf Electric_Funeral_Icon_Theme.git/Dominus\ Light\ Funeral/
+    ln -sf Electric_Funeral_Icon_Theme.git/Electric_Dark_Funeral/
+    ln -sf Electric_Funeral_Icon_Theme.git/Electric_Light_Funeral/
+    ln -sf Electric_Funeral_Icon_Theme.git/Dominus_Dark_Funeral/
+    ln -sf Electric_Funeral_Icon_Theme.git/Dominus_Light_Funeral/
 fi
 
 # Absolute GTK Theme
