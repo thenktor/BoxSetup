@@ -30,18 +30,18 @@ fi
 
 # Electric Funeral icons
 cd
-if [ ! -e ~/.icons/Electric_Funeral_Icon_Theme.git ]; then
-    echo "Install Electric Funeral icon theme..."
-    git clone https://github.com/ju1464/Electric_Funeral_Icon_Theme.git ~/.icons/Electric_Funeral_Icon_Theme.git
+if [ ! -e ~/.icons/Dominus_Funeral_Icon_Theme.git ]; then
+    echo "Install Funeral icon theme..."
+    git clone https://github.com/ju1464/Dominus_Funeral_Icon_Theme.git ~/.icons/Dominus_Funeral_Icon_Theme.git
 else
     echo "Update Electric Funeral icon theme..."
     cd ~/.icons/Electric_Funeral_Icon_Theme.git
     git pull
     cd ~/.icons/
-    ln -sf Electric_Funeral_Icon_Theme.git/Electric_Dark_Funeral/ Electric_Dark_Funeral
-    ln -sf Electric_Funeral_Icon_Theme.git/Electric_Light_Funeral/ Electric_Light_Funeral
-    ln -sf Electric_Funeral_Icon_Theme.git/Dominus_Dark_Funeral/ Dominus_Dark_Funeral
-    ln -sf Electric_Funeral_Icon_Theme.git/Dominus_Light_Funeral/ Dominus_Light_Funeral
+    ln -sf Dominus_Funeral_Icon_Theme.git/Old_Icons/Electric_Dark_Funeral/ Electric_Dark_Funeral
+    ln -sf Dominus_Funeral_Icon_Theme.git/Old_Icons/Electric_Light_Funeral/ Electric_Light_Funeral
+    ln -sf Dominus_Funeral_Icon_Theme.git/Dominus_Dark_Funeral/ Dominus_Dark_Funeral
+    ln -sf Dominus_Funeral_Icon_Theme.git/Dominus_Light_Funeral/ Dominus_Light_Funeral
 fi
 
 # Absolute GTK Theme
